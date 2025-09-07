@@ -13,6 +13,8 @@ As of September 2025, countries supplying Israel can be divided into two clear g
 
 Together, these two groups – one supplying lethal force, the other supplying essential civilian and strategic support – highlight the layered networks that sustain Israel’s position despite ongoing genocide.
 
+<img alt="Supporters PieChart" style="float: right;width: 550px;" src="israel_supporters_piechart_groups_legend.png">
+
 ## **🔴 Red List – Active Suppliers**
 
 These countries are actively and officially supplying Israel today – either weapons, energy, or significant civilian goods/services.
