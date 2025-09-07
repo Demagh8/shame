@@ -74,3 +74,42 @@ ax.legend(handles=patches, loc="lower left", fontsize=16, title="Legend", title_
 # Save PNG
 plt.savefig("countries_supplying_israel_sep2025.png", dpi=300, bbox_inches="tight")
 plt.show()
+
+################################### Next: Make the Pie Chart ##############################
+
+# Data based on approx. annual support volumes (in millions USD equivalent)
+countries = [
+    "USA", "Germany", "UK", "Azerbaijan", "UAE",
+    "Egypt", "Jordan", "Morocco", "Bahrain"
+]
+values = [4000, 300, 50, 1000, 1600, 300, 160, 120, 20]
+
+# Assign colors: Western (first 3) in yellow-brown tones, Arabs/regional (others) in greens
+colors = [
+    "#FFD700", "#DAA520", "#8B4513",   # Western group
+    "#006400", "#228B22", "#32CD32", "#66CDAA", "#90EE90", "#C1FFC1"  # Arab/regional group
+]
+
+fig, ax = plt.subplots(figsize=(10, 10))
+
+# ✅ Donut chart with no labels
+wedges, _ = ax.pie(
+    values, labels=None, startangle=90, colors=colors,
+    wedgeprops=dict(width=0.4)
+)
+
+# Prepare legend labels with volumes
+country_labels = [f"{c} – {v}M USD" for c, v in zip(countries, values)]
+
+# Add legend in the center hole
+plt.legend(
+    wedges, country_labels,
+    loc="center", fontsize=11, title="Support Volume", title_fontsize=13
+)
+plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
+
+# Save image
+output_path = "israel_supporters_piechart_groups_legend.png"
+plt.savefig(output_path, dpi=300, bbox_inches="tight")
+plt.show()
+
